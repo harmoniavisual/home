@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tom Claro – Paleta por Contexto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    /*=============== CORES BASE ===============*/
+    :root{
+      /* cor padrão neutra do site */
+      --site-bg:#FAFAF7;
+      /* tom de pele – usado em bordas e container */
+      --skin-bg:#FFE0C7;
+      /* tons de destaque */
+      --highlight:#FFD0A8;
+      --dark-accent:#82431F;
+      --card-bg:#FFFFFF;
+      --text-dark:#372413;
+      --text-body:#3F2F17;
+    }
+
+    /*=============== RESET & TIPOS ===============*/
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Roboto, sans-serif;}
+    body{background:var(--site-bg);color:var(--text-body);line-height:1.5;}
+    h1,h2,h3{font-family:Poppins, sans-serif;color:var(--text-dark);}    
+
+    /*=============== SEÇÕES ===============*/
+    header{padding:60px 5%;text-align:center;background:var(--highlight);border-bottom:8px solid var(--skin-bg);}    
+    header h1{font-size:2.4rem;margin-bottom:12px;color:var(--dark-accent);}    
+    header p{font-size:1.1rem;max-width:720px;margin:0 auto;color:var(--text-body);}    
+
+    section{padding:60px 5%;}
+    section h2{font-size:1.8rem;margin-bottom:28px;}
+
+    /* palette container – borda fina (2px) marrom escuro */
+    .palette-container{background:var(--skin-bg);border:2px solid var(--dark-accent);border-radius:26px;padding:28px;display:inline-block;box-shadow:0 6px 16px rgba(0,0,0,.07);margin-bottom:24px;}
+    /* grid dentro do container */
+    .palette{display:flex;flex-wrap:wrap;gap:18px;justify-content:flex-start;}
+    .swatch{width:78px;height:78px;border-radius:14px;position:relative;border:4px solid var(--skin-bg);box-shadow:0 2px 6px rgba(0,0,0,.06);transition:transform .2s;background:#eee;overflow:hidden;}
+    .swatch:hover{transform:scale(1.05);}    
+    .swatch span{position:absolute;bottom:6px;left:6px;font-size:.65rem;background:rgba(255,255,255,.8);padding:2px 4px;border-radius:4px;backdrop-filter:blur(3px);}    
+
+    .card{background:var(--card-bg);border-radius:18px;box-shadow:0 4px 12px rgba(0,0,0,.08);padding:28px;margin-top:14px;}
+
+    /*=============== CTA ===============*/
+    .cta{background:var(--highlight);text-align:center;padding:60px 5%;}
+    .cta p{font-size:1.3rem;margin-bottom:24px;font-family:Poppins;color:var(--dark-accent);}    
+    .cta a{background:var(--dark-accent);color:#fff;padding:16px 34px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block;transition:opacity .2s;}
+    .cta a:hover{opacity:.9;}
+
+    footer{background:rgba(0,0,0,.04);padding:28px 5%;font-size:.8rem;text-align:center;}
+
+    /* mobile */
+    @media(max-width:800px){
+      .palette{justify-content:center;}
+      .swatch{width:66px;height:66px;}
+      header h1{font-size:2rem;}
+      section h2{font-size:1.6rem;}
+    }
+  </style>
+</head>
+<body>
+  <!--==================== HERO ====================-->
+  <header>
+    <h1>Seu Tom Claro</h1>
+    <p>Visualize como as cores se harmonizam no seu próprio tom de pele. Explore paletas ideais para cada ocasião.</p>
+  </header>
+
+  <!--==================== CASUAL ====================-->
+  <section id="casual">
+    <h2>Roupas Casuais</h2>
+    <div class="palette-container">
+      <div class="palette">
+        <div class="swatch" style="background:#7FFFD4;"><span>#7FFFD4</span></div>
+        <div class="swatch" style="background:#C8A2C8;"><span>#C8A2C8</span></div>
+        <div class="swatch" style="background:#FFC0CB;"><span>#FFC0CB</span></div>
+        <div class="swatch" style="background:#D3D3D3;"><span>#D3D3D3</span></div>
+        <div class="swatch" style="background:#F5F5DC;"><span>#F5F5DC</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <p><strong>Use assim:</strong> combine blusa lilás com jeans médio para contraste suave ou acrescente acessório aquamarine quando vestir tons neutros claros.</p>
+    </div>
+  </section>
+
+  <!--==================== FORMAL ====================-->
+  <section id="formal">
+    <h2>Roupas Formais</h2>
+    <div class="palette-container">
+      <div class="palette">
+        <div class="swatch" style="background:#002147;"><span>#002147</span></div>
+        <div class="swatch" style="background:#004C66;"><span>#004C66</span></div>
+        <div class="swatch" style="background:#36454F;"><span>#36454F</span></div>
+        <div class="swatch" style="background:#800020;"><span>#800020</span></div>
+        <div class="swatch" style="background:#4B3621;"><span>#4B3621</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <p><strong>Dica rápida:</strong> troque o preto por azul‑marinho ou cinza carvão para sofisticação sem endurecer a feição. Um detalhe vinho dá personalidade.</p>
+    </div>
+  </section>
+
+  <!--==================== VERÃO ====================-->
+  <section id="verao">
+    <h2>Looks de Verão</h2>
+    <div class="palette-container">
+      <div class="palette">
+        <div class="swatch" style="background:#FFDAB9;"><span>#FFDAB9</span></div>
+        <div class="swatch" style="background:#FF7F50;"><span>#FF7F50</span></div>
+        <div class="swatch" style="background:#FDBE87;"><span>#FDBE87</span></div>
+        <div class="swatch" style="background:#98FF98;"><span>#98FF98</span></div>
+        <div class="swatch" style="background:#E6E6FA;"><span>#E6E6FA</span></div>
+        <div class="swatch" style="background:#ADD8E6;"><span>#ADD8E6</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <p><strong>Proposta:</strong> vestidos mint com sandália nude rosada ou saia coral com blusa off‑white. Adicione acessório turquesa para vibrar.</p>
+    </div>
+  </section>
+
+  <!--==================== INVERNO ====================-->
+  <section id="inverno">
+    <h2>Looks de Inverno</h2>
+    <div class="palette-container">
+      <div class="palette">
+        <div class="swatch" style="background:#50C878;"><span>#50C878</span></div>
+        <div class="swatch" style="background:#228B22;"><span>#228B22</span></div>
+        <div class="swatch" style="background:#9B111E;"><span>#9B111E</span></div>
+        <div class="swatch" style="background:#61346B;"><span>#61346B</span></div>
+        <div class="swatch" style="background:#013A63;"><span>#013A63</span></div>
+        <div class="swatch" style="background:#2F4F4F;"><span>#2F4F4F</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <p><strong>Truque:</strong> sobreponha casaco camelo a suéter vinho ou verde‑escuro. Se usar preto, quebre com lenço cor joya.</p>
+    </div>
+  </section>
+
+  <!--==================== FESTA ====================-->
+  <section id="festa">
+    <h2>Looks de Festa &amp; Eventos</h2>
+    <div class="palette-container">
+      <div class="palette">
+        <div class="swatch" style="background:#00008B;"><span>#00008B</span></div>
+        <div class="swatch" style="background:#50C878;"><span>#50C878</span></div>
+        <div class="swatch" style="background:#4169E1;"><span>#4169E1</span></div>
+        <div class="swatch" style="background:#DE316
