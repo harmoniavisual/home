@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonia Visual – Corpo Ampulheta (F)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --site-bg:#FAFAF7;
+      --primary:#82431F;
+      --secondary:#FFD0A8;
+      --dark:#3F2F17;
+      --radius:18px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Roboto,sans-serif;}
+    body{background:var(--site-bg);color:var(--dark);line-height:1.5;}
+    a{text-decoration:none;color:var(--primary);} a.btn{display:inline-block;padding:10px 20px;border-radius:50px;background:var(--primary);color:#fff;font-weight:600;margin-top:12px;transition:opacity .3s;} a.btn:hover{opacity:.85;}
+    /*=============== HEADER ===============*/
+    header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:var(--secondary);}
+    header h1{font-family:Poppins,sans-serif;font-size:1.4rem;color:var(--dark);}
+    .hamburger{background:none;border:none;font-size:1.8rem;color:var(--dark);cursor:pointer;}
+    nav{position:fixed;top:0;right:-100%;height:100%;width:260px;background:var(--secondary);padding:60px 24px;transition:right .4s ease;display:flex;flex-direction:column;gap:20px;}
+    nav.open{right:0;}
+    nav a{font-size:1rem;color:var(--dark);} nav a.cta{background:var(--primary);color:#fff;border-radius:40px;padding:10px 18px;text-align:center;}
+    /*=============== HERO ===============*/
+    .hero{max-width:900px;margin:40px auto;text-align:center;padding:0 20px;}
+    .hero img{width:240px;height:auto;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,.08);margin-bottom:24px;object-fit:cover;}
+    .hero p{margin-bottom:12px;}
+    /*=============== LOOK SECTIONS ===============*/
+    section.looks{max-width:1000px;margin:40px auto;padding:0 20px;}
+    section.looks h2{font-family:Poppins,sans-serif;font-size:1.25rem;margin-bottom:14px;color:var(--primary);}
+    .look-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+    .look-card{background:#fff;border:2px solid var(--secondary);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;align-items:center;box-shadow:0 3px 8px rgba(0,0,0,.05);} 
+    .look-card img{width:200px;height:260px;border-radius:var(--radius);object-fit:cover;margin-bottom:12px;}
+    .look-card h3{font-size:1rem;margin-bottom:6px;color:var(--dark);} .look-card p{font-size:.9rem;text-align:center;margin-bottom:10px;}
+    /*=============== FOOTER ===============*/
+    footer{text-align:center;padding:40px 20px;font-size:.85rem;color:#666;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Harmonia Visual</h1>
+    <button class="hamburger" id="openMenu">☰</button>
+  </header>
+  <!-- Mobile Nav -->
+  <nav id="mobileNav">
+    <a href="index.html">Início</a>
+    <a href="formatos-femininos.html">Formatos Femininos</a>
+    <a href="formatos-masculinos.html">Formatos Masculinos</a>
+    <a href="#" class="cta">Adquirir o App</a>
+  </nav>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="img/feminino/ampulheta.png" alt="Ilustração corpo ampulheta">
+    <p><strong>Corpo Ampulheta:</strong> ombros e quadris alinhados, cintura bem definida (proporção típica: <em>busto ≈ quadril</em> &gt; cintura em ~25%).</p>
+    <p>Valorize seu equilíbrio natural com peças que destaquem a cintura e respeitem suas curvas.</p>
+  </section>
+
+  <!-- Looks por evento -->
+  <section class="looks" id="casual">
+    <h2>Looks Casuais</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/looks/casual1.png" alt="Look Casual 1">
+        <h3>Jeans + Camiseta Ajustada</h3>
+        <p>Perfeito para passeios diurnos; a cintura marcada ressalta suas curvas.</p>
+        <a href="#" class="btn">Descubra as cores perfeitas ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/casual2.png" alt="Look Casual 2">
+        <h3>Vestido Envelope Midi</h3>
+        <p>Realça a cintura, cria movimento elegante – ideal brunch ou shopping.</p>
+        <a href="#" class="btn">Veja tons que destacam você ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/casual3.png" alt="Look Casual 3">
+        <h3>Blusa Peplum + Skinny</h3>
+        <p>Blusa estruturada equilibra ombros e quadris; ótimo para encontros casuais.</p>
+        <a href="#" class="btn">Quero ver minha paleta ➜</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="formal">
+    <h2>Looks Formais</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/looks/formal1.png" alt="Look Formal 1">
+        <h3>Blazer Acinturado + Lápis</h3>
+        <p>Silhueta afiada e profissional para reuniões ou escritório.</p>
+        <a href="#" class="btn">Cores que impõem respeito ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/formal2.png" alt="Look Formal 2">
+        <h3>Macacão Tailored</h3>
+        <p>Linhas limpas alongam o corpo, mantendo proporção ampulheta.</p>
+        <a href="#" class="btn">Quero minhas melhores cores ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/formal3.png" alt="Look Formal 3">
+        <h3>Vestido Tubo Cinto Fino</h3>
+        <p>Clássico e elegante para eventos corporativos à noite.</p>
+        <a href="#" class="btn">Ver paleta elegante ➜</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="verao">
+    <h2>Looks de Verão</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/looks/verao1.png" alt="Look Verão 1">
+        <h3>Cropped + Saia Fluida</h3>
+        <p>Fresco e feminino; cintura alta mantém a silhueta equilibrada.</p>
+        <a href="#" class="btn">Tons vibrantes para o calor ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/verao2.png" alt="Look Verão 2">
+        <h3>Macacão Pantacourt Leve</h3>
+        <p>Alonga e refresca; ótimo para passeios de fim de tarde.</p>
+        <a href="#" class="btn">Ver cores solares ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/verao3.png" alt="Look Verão 3">
+        <h3>Vestido Wrap Floral</h3>
+        <p>Amarração ajusta a cintura; perfeito para beach clubs.</p>
+        <a href="#" class="btn">Minha paleta tropical ➜</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="inverno">
+    <h2>Looks de Inverno</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/looks/inverno1.png" alt="Look Inverno 1">
+        <h3>Trench Coat Cinto Largo</h3>
+        <p>Marca a cintura enquanto protege do frio – city chic.</p>
+        <a href="#" class="btn">Cores que aquecem ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/inverno2.png" alt="Look Inverno 2">
+        <h3>Suéter Gola Alta + Saia Midi</h3>
+        <p>Texturas ricas equilibram curvas com conforto.</p>
+        <a href="#" class="btn">Ver tons aconchegantes ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/inverno3.png" alt="Look Inverno 3">
+        <h3>Casaco Peplum + Calça Reta</h3>
+        <p>Acentua cintura e adiciona estrutura elegante.</p>
+        <a href="#" class="btn">Quero minha paleta fria ➜</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="festas">
+    <h2>Festas & Eventos</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/looks/festa1.png" alt="Look Festa 1">
+        <h3>Vestido Sereia</h3>
+        <p>Abraça suas curvas; ideal para gala ou casamentos.</p>
+        <a href="#" class="btn">Descobrir cores glam ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/festa2.png" alt="Look Festa 2">
+        <h3>Macacão Fenda Lateral</h3>
+        <p>Alongado e sensual sem exageros – coquetéis.</p>
+        <a href="#" class="btn">Paleta para brilhar ➜</a>
+      </div>
+      <div class="look-card">
+        <img src="img/looks/festa3.png" alt="Look Festa 3">
+        <h3>Conjunto Cropped + Saia Satin</h3>
+        <p>Mostra pele com equilíbrio; perfeito para baladas.</p>
+        <a href="#" class="btn">Quais cores arrasam? ➜</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Harmonia Visual. Todas as imagens são ilustrativas.</p>
+  </footer>
+
+  <script>
+    const openMenu=document.getElementById('openMenu');
+    const mobileNav=document.getElementById('mobileNav');
+    openMenu.addEventListener('click',()=>mobileNav.classList.toggle('open'));
+  </script>
+</body>
+</html>

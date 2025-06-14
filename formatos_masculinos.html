@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonia Visual – Formatos de Corpo Masculinos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --site-bg:#FAFAF7;
+      --primary:#82431F;
+      --secondary:#FFD0A8;
+      --text:#372413;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Roboto,sans-serif;color:var(--text);}    
+    body{background:var(--site-bg);}    
+    header{padding:16px 24px;background:var(--secondary);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;}
+    .brand{font-family:Poppins,sans-serif;font-size:1.4rem;font-weight:700;color:var(--primary);}    
+    .burger{width:28px;height:20px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;}
+    .burger span{height:3px;width:100%;background:var(--primary);border-radius:2px;transition:.3s;}
+    nav{position:fixed;inset:0 0 0 60%;background:#ffffffdd;backdrop-filter:blur(4px);transform:translateX(100%);transition:.4s;padding:80px 24px;display:flex;flex-direction:column;gap:24px;}
+    nav.open{transform:translateX(0);}    
+    nav a{font-size:1.1rem;font-weight:600;color:var(--primary);text-decoration:none;}
+
+    .hero{max-width:900px;margin:40px auto;padding:0 24px;text-align:center;display:flex;flex-direction:column;gap:20px;}
+    .hero h1{font-family:Poppins,sans-serif;font-size:2rem;color:var(--primary);}    
+    .cards{max-width:1100px;margin:56px auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;}
+    .card{background:#fff;border-radius:18px;box-shadow:0 4px 14px #0002;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;align-items:center;}
+    .card img{width:100%;height:260px;object-fit:cover;}
+    .card span{font-family:Poppins,sans-serif;font-size:1rem;color:var(--primary);padding:16px;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Harmonia Visual</div>
+    <div class="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </header>
+  <nav id="navMenu">
+    <a href="index.html">Início</a>
+    <a href="formatos-femininos.html">Formatos Femininos</a>
+    <a href="formatos-masculinos.html">Formatos Masculinos</a>
+    <a href="#" class="btn-app">Adquira o App</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Escolha o seu formato de corpo</h1>
+    <p>Selecione abaixo o tipo que mais se assemelha ao seu para ver looks e dicas adaptadas.</p>
+  </section>
+
+  <div class="cards">
+    <a class="card" href="formato-trapezio-m.html">
+      <img src="img/masculino/trapezio/thumb.png" alt="Formato Trapézio Masculino">
+      <span>Trapézio</span>
+    </a>
+    <a class="card" href="formato-triangulo-invertido-m.html">
+      <img src="img/masculino/triangulo-invertido/thumb.png" alt="Formato Triângulo Invertido Masculino">
+      <span>Triângulo Invertido</span>
+    </a>
+    <a class="card" href="formato-retangulo-m.html">
+      <img src="img/masculino/retangulo/thumb.png" alt="Formato Retângulo Masculino">
+      <span>Retângulo</span>
+    </a>
+    <a class="card" href="formato-oval-m.html">
+      <img src="img/masculino/oval/thumb.png" alt="Formato Oval Masculino">
+      <span>Oval</span>
+    </a>
+    <a class="card" href="formato-triangulo-m.html">
+      <img src="img/masculino/triangulo/thumb.png" alt="Formato Triângulo Masculino">
+      <span>Triângulo</span>
+    </a>
+    <a class="card" href="formato-diamante-m.html">
+      <img src="img/masculino/diamante/thumb.png" alt="Formato Diamante Masculino">
+      <span>Diamante</span>
+    </a>
+  </div>
+
+  <script>
+    function toggleNav(){document.getElementById('navMenu').classList.toggle('open');}
+  </script>
+</body>
+</html>

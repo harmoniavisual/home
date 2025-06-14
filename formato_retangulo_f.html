@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonia Visual – Corpo Retângulo (F)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --site-bg:#FAFAF7;
+      --primary:#82431F;          /* marrom elegante */
+      --secondary:#FFD0A8;        /* bege destaque */
+      --text:#372413;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Roboto,sans-serif;}
+    body{background:var(--site-bg);color:var(--text);}
+    a{text-decoration:none;color:inherit;}
+    /*=========== NAV ===========*/
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:var(--secondary);}
+    .logo{font-family:Poppins,sans-serif;font-weight:700;font-size:1.3rem;color:var(--primary);}
+    .burger{width:28px;height:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;}
+    .burger span{height:4px;width:100%;background:var(--primary);border-radius:2px;transition:.3s;}
+    nav{position:fixed;inset:0;transform:translateX(100%);background:rgba(250,250,247,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transition:.3s;z-index:99;}
+    nav.open{transform:translateX(0);}
+    nav a{font-size:1.1rem;font-weight:600;color:var(--primary);}  
+    /*=========== HERO ===========*/
+    .hero{max-width:1100px;margin:48px auto;text-align:center;padding:0 24px;}
+    .hero img{width:260px;max-width:100%;border-radius:24px;box-shadow:0 4px 20px rgba(0,0,0,.08);}
+    .hero h1{font-family:Poppins,sans-serif;font-size:2rem;margin:24px 0 12px;color:var(--primary);}  
+    .hero p{font-size:1rem;line-height:1.5;margin-bottom:24px;}
+
+    /*=========== LOOK SECTIONS ===========*/
+    .looks{max-width:1200px;margin:0 auto 64px;padding:0 24px;}
+    .looks h2{font-family:Poppins,sans-serif;font-size:1.4rem;color:var(--primary);margin:36px 0 18px;text-align:center;}
+    .look-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:12px;}
+    .look-card{background:#fff;border-radius:18px;box-shadow:0 4px 16px rgba(0,0,0,.06);overflow:hidden;display:flex;flex-direction:column;}
+    .look-card img{width:100%;height:260px;object-fit:cover;}
+    .look-card .info{padding:16px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between;}
+    .look-card .info p{font-size:.9rem;line-height:1.4;margin-bottom:12px;}
+    .btn-paleta{background:var(--primary);color:#fff;padding:10px 16px;border-radius:12px;font-size:.9rem;text-align:center;}
+    .btn-paleta:hover{opacity:.9;}
+
+    /*=========== FOOTER CTA ===========*/
+    .cta{background:var(--secondary);padding:32px 24px;text-align:center;}
+    .cta h3{font-family:Poppins,sans-serif;font-size:1.5rem;color:var(--primary);margin-bottom:12px;}
+    .cta p{font-size:1rem;margin-bottom:20px;}
+    .btn-app{background:var(--primary);color:#fff;padding:14px 28px;border-radius:14px;font-size:1rem;font-weight:600;}
+
+    @media(max-width:600px){
+      .hero h1{font-size:1.6rem;}
+      .looks h2{font-size:1.25rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Harmonia Visual</div>
+    <div class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+  <nav id="menu">
+    <a href="index.html">Início</a>
+    <a href="formatos-femininos.html">Formatos Femininos</a>
+    <a href="formatos-masculinos.html">Formatos Masculinos</a>
+    <a href="#" class="btn-app">Adquira o App</a>
+  </nav>
+
+  <section class="hero">
+    <img src="img/feminino/retangulo/hero.png" alt="Silhueta corpo retângulo">
+    <h1>Corpo Retângulo</h1>
+    <p>Ombros, cintura e quadris têm medidas similares, criando uma linha reta. O objetivo é adicionar curvas e marcar a cintura visualmente.</p>
+  </section>
+
+  <section class="looks" id="casual">
+    <h2>Looks Casuais</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/feminino/retangulo/casual1.png" alt="Look Casual 1">
+        <div class="info">
+          <p>Cintura marcada por cinto médio; camiseta semi‑cropped e mom jeans.<br><em>Perfeito para passeio de fim de semana.</em></p>
+          <a class="btn-paleta" href="tom-claro.html">Quero ver as cores ideais »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/casual2.png" alt="Look Casual 2">
+        <div class="info">
+          <p>Vestido camisero com amarração e tênis branco minimalista.<br><em>Conforto sem perder o estilo.</em></p>
+          <a class="btn-paleta" href="tom-claro.html">Quero ver as cores ideais »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/casual3.png" alt="Look Casual 3">
+        <div class="info">
+          <p>Blusa peplum e calça flare cropped para criar curvas instantâneas.</p>
+          <a class="btn-paleta" href="tom-claro.html">Quero ver as cores ideais »</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="formal">
+    <h2>Looks Formais</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/feminino/retangulo/formal1.png" alt="Look Formal 1">
+        <div class="info">
+          <p>Blazer acinturado + saia evasê midi: proporção equilibrada para reuniões.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta deste look »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/formal2.png" alt="Look Formal 2">
+        <div class="info">
+          <p>Macacão de alfaiataria com faixa na cintura: alonga e define.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta deste look »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/formal3.png" alt="Look Formal 3">
+        <div class="info">
+          <p>Conjunto blazer cropped + calça cenoura: estrutura e feminilidade.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta deste look »</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="verao">
+    <h2>Looks de Verão</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/feminino/retangulo/verao1.png" alt="Look Verão 1">
+        <div class="info">
+          <p>Top frente‑única peplum + short clochard: leve, marca cintura.</p>
+          <a class="btn-paleta" href="tom-claro.html">Paleta que combina »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/verao2.png" alt="Look Verão 2">
+        <div class="info">
+          <p>Vestido wrap (transpassado) – cria curvas e é fresco.</p>
+          <a class="btn-paleta" href="tom-claro.html">Paleta que combina »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/verao3.png" alt="Look Verão 3">
+        <div class="info">
+          <p>Cropped ombro‑a‑ombro + saia godê curta: equilíbrio divertido.</p>
+          <a class="btn-paleta" href="tom-claro.html">Paleta que combina »</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="inverno">
+    <h2>Looks de Inverno</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/feminino/retangulo/inverno1.png" alt="Look Inverno 1">
+        <div class="info">
+          <p>Capa estruturada sobre suéter + saia lápis: sofisticação térmica.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/inverno2.png" alt="Look Inverno 2">
+        <div class="info">
+          <p>Blusa canelada + calça flare e cinto grosso: aquece e afina.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/inverno3.png" alt="Look Inverno 3">
+        <div class="info">
+          <p>Vestido sweater cinta‑wrap + bota cano alto: prático e curvilíneo.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta »</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="looks" id="festa">
+    <h2>Looks para Festas & Eventos</h2>
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="img/feminino/retangulo/festa1.png" alt="Look Festa 1">
+        <div class="info">
+          <p>Vestido sereia com recorte cintura: cria silhueta ampulheta glam.</p>
+          <a class="btn-paleta" href="tom-claro.html">Cores deste look »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/festa2.png" alt="Look Festa 2">
+        <div class="info">
+          <p>Macacão pantacourt metalizado + cinto statement.</p>
+          <a class="btn-paleta" href="tom-claro.html">Cores deste look »</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/retangulo/festa3.png" alt="Look Festa 3">
+        <div class="info">
+          <p>Saia lápis paetê + top assimétrico estruturado.</p>
+          <a class="btn-paleta" href="tom-claro.html">Cores deste look »</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h3>Quer looks e cores 100% sob medida?</h3>
+    <p>Nosso aplicativo analisa sua foto, identifica o tom de pele e o formato de corpo e entrega uma vitrine personalizada de peças que te valorizam.</p>
+    <a href="#" class="btn-app">Adquirir o App</a>
+  </section>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById('menu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

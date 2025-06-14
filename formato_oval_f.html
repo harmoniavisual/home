@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonia Visual – Corpo Oval (F)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --site-bg:#FAFAF7;
+      --primary:#82431F;          /* marrom elegante */
+      --secondary:#FFD0A8;        /* destaque suave */
+      --text:#372413;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Roboto,sans-serif;}
+    body{background:var(--site-bg);color:var(--text);}
+    a{text-decoration:none;color:inherit;}
+    /*================ NAV ================*/
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:20;}
+    .brand{font-family:Poppins,sans-serif;font-size:1.25rem;font-weight:700;color:var(--primary);}    
+    .burger{width:24px;height:18px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;}
+    .burger span{display:block;height:3px;background:var(--primary);border-radius:2px;transition:.3s;}
+    nav{position:fixed;inset:0 0 0 100%;background:#fff;padding:80px 24px;display:flex;flex-direction:column;gap:28px;transition:.4s;z-index:30;}
+    nav.open{transform:translateX(-100%);}    
+    nav a{font-size:1.1rem;font-weight:500;}
+    .cta-app{background:var(--primary);color:#fff;padding:12px 20px;border-radius:30px;font-weight:600;align-self:flex-start;}
+    /*================ HERO ================*/
+    .hero{max-width:1100px;margin:60px auto 40px;padding:0 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px;}
+    .hero img{width:320px;height:auto;border-radius:16px;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.08);}   
+    .hero h1{font-family:Poppins,sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--primary);}  
+    .hero p{max-width:640px;font-size:1rem;line-height:1.5;}
+    /*================ LOOKS ================*/
+    section{max-width:1100px;margin:40px auto;padding:0 24px;}
+    .looks-group{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
+    .look-card{background:#fff;border-radius:18px;box-shadow:0 2px 8px rgba(0,0,0,.05);padding:16px 16px 24px;display:flex;flex-direction:column;gap:12px;}
+    .look-card img{width:100%;height:260px;object-fit:cover;border-radius:14px;}
+    .look-card h4{font-family:Poppins,sans-serif;font-size:1rem;color:var(--primary);} 
+    .look-card p{font-size:.9rem;line-height:1.4;}
+    .look-card a{margin-top:auto;background:var(--secondary);color:var(--text);padding:10px 16px;border-radius:24px;font-weight:600;text-align:center;transition:.2s;}
+    .look-card a:hover{background:var(--primary);color:#fff;}
+    /*================ FOOTER ================*/
+    footer{margin:80px 0 24px;text-align:center;font-size:.85rem;color:#666;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Harmonia Visual</div>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+  <nav id="nav">
+      <a href="index.html">Início</a>
+      <a href="formatos-femininos.html">Formatos Femininos</a>
+      <a href="formatos-masculinos.html">Formatos Masculinos</a>
+      <a href="#" class="cta-app">Adquira o App</a>
+  </nav>
+  
+  <section class="hero">
+    <img src="img/feminino/oval/hero.png" alt="Exemplo de silhueta oval feminina">
+    <h1>Corpo Oval</h1>
+    <p>O formato oval apresenta cintura pouco definida, região abdominal mais volumosa e ombros e quadris equilibrados. O objetivo ao montar looks é alongar a silhueta, criar linhas verticais e destacar o colo e as pernas.</p>
+  </section>
+
+  <!-- ==================== LOOKS ==================== -->
+  <section>
+    <h2>Casual</h2>
+    <div class="looks-group">
+      <div class="look-card">
+         <img src="img/feminino/oval/casual1.png" alt="Casual 1 oval">
+         <h4>Jeans reto + Blusa ombro‑a‑ombro</h4>
+         <p>Ideal para passeios diurnos. Ombro à mostra traz foco para a parte superior.</p>
+         <a href="tom-claro.html">Veja as cores que valorizam este look</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/casual2.png" alt="Casual 2 oval">
+         <h4>Camiseta solta + Saia midi evasê</h4>
+         <p>Ocasiões casuais elegantes. Linhas A alongam o corpo.</p>
+         <a href="tom-claro.html">Descubra a paleta perfeita para você</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/casual3.png" alt="Casual 3 oval">
+         <h4>Vestido chemise com cinto</h4>
+         <p>Cinto posicionado levemente acima da cintura define e alonga.</p>
+         <a href="tom-claro.html">Quais cores realçam esse visual?</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Formal</h2>
+    <div class="looks-group">
+      <div class="look-card">
+         <img src="img/feminino/oval/formal1.png" alt="Formal 1 oval">
+         <h4>Blazer alongado + Calça reta</h4>
+         <p>Perfeito para o escritório. Lapelas verticais criam linha alongadora.</p>
+         <a href="tom-claro.html">Descubra cores elegantes para destacar</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/formal2.png" alt="Formal 2 oval">
+         <h4>Macacão de alfaiataria</h4>
+         <p>Monocromático, marca a cintura e alonga pernas.</p>
+         <a href="tom-claro.html">Veja tons sofisticados para brilhar</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/formal3.png" alt="Formal 3 oval">
+         <h4>Vestido midi envelope</h4>
+         <p>Transpasse cria ilusão de cintura e equilíbrio.</p>
+         <a href="tom-claro.html">Qual paleta faz você se destacar?</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Verão</h2>
+    <div class="looks-group">
+      <div class="look-card">
+         <img src="img/feminino/oval/verao1.png" alt="Verão 1 oval">
+         <h4>Kaftan curto estampado</h4>
+         <p>Leve e solto, ideal para dias quentes.</p>
+         <a href="tom-claro.html">Combine com cores solares!</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/verao2.png" alt="Verão 2 oval">
+         <h4>Regata fluida + Short alfaiataria</h4>
+         <p>Frescor com elegância casual.</p>
+         <a href="tom-claro.html">Descubra tons vibrantes perfeitos</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/verao3.png" alt="Verão 3 oval">
+         <h4>Vestido slip dress</h4>
+         <p>Silhueta longa e fresca; combina com rasteiras.</p>
+         <a href="tom-claro.html">Veja as cores de destaque</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Inverno</h2>
+    <div class="looks-group">
+      <div class="look-card">
+         <img src="img/feminino/oval/inverno1.png" alt="Inverno 1 oval">
+         <h4>Cardigan alongado + Legging escura</h4>
+         <p>Linhas verticais e conforto térmico.</p>
+         <a href="tom-claro.html">Tons quentes para aquecer o visual</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/inverno2.png" alt="Inverno 2 oval">
+         <h4>Trench coat acinturado</h4>
+         <p>Cinto realça cintura e alonga corpo.</p>
+         <a href="tom-claro.html">Descubra cores invernais ideais</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/inverno3.png" alt="Inverno 3 oval">
+         <h4>Suéter V + Saia midi reta</h4>
+         <p>Decote V atrai olhar para o rosto.</p>
+         <a href="tom-claro.html">Veja a paleta mais harmoniosa</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Festas & Eventos</h2>
+    <div class="looks-group">
+      <div class="look-card">
+         <img src="img/feminino/oval/festa1.png" alt="Festa 1 oval">
+         <h4>Vestido império com brilho</h4>
+         <p>Cintura alta define e valoriza colo.</p>
+         <a href="tom-claro.html">Descubra cores que irradiam glamour</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/festa2.png" alt="Festa 2 oval">
+         <h4>Macacão flare acetinado</h4>
+         <p>Alongamento instantâneo + elegância.</p>
+         <a href="tom-claro.html">Veja quais tons ressaltam o tecido</a>
+      </div>
+      <div class="look-card">
+         <img src="img/feminino/oval/festa3.png" alt="Festa 3 oval">
+         <h4>Saia lápis brilhante + Blusa decote coração</h4>
+         <p>Destaque na parte superior, equilíbrio perfeito.</p>
+         <a href="tom-claro.html">Qual paleta faz você brilhar?</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Harmonia Visual · Todos os direitos reservados
+  </footer>
+
+<script>
+const burger=document.getElementById('burger');
+const nav=document.getElementById('nav');
+burger.onclick=()=>nav.classList.toggle('open');
+</script>
+</body>
+</html>

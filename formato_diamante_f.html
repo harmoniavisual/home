@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonia Visual – Corpo Diamante (F)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --site-bg:#FAFAF7;
+      --primary:#82431F;          /* marrom elegante */
+      --secondary:#FFD0A8;
+      --text:#372413;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Roboto,sans-serif;color:var(--text);}    
+    body{background:var(--site-bg);}    
+
+    /* ===== Nav ===== */
+    header{padding:16px 24px;background:var(--secondary);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;}
+    .brand{font-family:Poppins,sans-serif;font-size:1.4rem;font-weight:700;color:var(--primary);}    
+    .burger{width:28px;height:20px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;}
+    .burger span{height:3px;width:100%;background:var(--primary);border-radius:2px;transition:.3s;}
+    nav{position:fixed;inset:0 0 0 60%;background:#ffffffdd;backdrop-filter:blur(4px);transform:translateX(100%);transition:.4s;padding:80px 24px;display:flex;flex-direction:column;gap:24px;}
+    nav.open{transform:translateX(0);}    
+    nav a{font-size:1.1rem;font-weight:600;color:var(--primary);text-decoration:none;}
+
+    /* ===== Hero ===== */
+    .hero{max-width:1000px;margin:40px auto;padding:0 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;}
+    .hero img{width:260px;height:auto;border-radius:16px;object-fit:cover;box-shadow:0 6px 16px #0001;}
+    .hero h1{font-family:Poppins,sans-serif;font-size:2rem;color:var(--primary);}    
+    .hero p{font-size:1rem;line-height:1.5;}    
+
+    /* ===== Looks ===== */
+    section{max-width:1100px;margin:56px auto;padding:0 24px;}
+    section h2{font-family:Poppins,sans-serif;font-size:1.5rem;color:var(--primary);margin-bottom:24px;}
+    .looks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;}
+    .look-card{background:#fff;border-radius:18px;box-shadow:0 4px 14px #0002;overflow:hidden;display:flex;flex-direction:column;}
+    .look-card img{width:100%;height:280px;object-fit:cover;}
+    .look-card .info{padding:16px;display:flex;flex-direction:column;gap:12px;flex-grow:1;}
+    .look-card .info p{font-size:.9rem;line-height:1.4;flex-grow:1;}
+    .btn-paleta{background:var(--primary);color:#fff;text-align:center;padding:10px 14px;border-radius:12px;text-decoration:none;font-size:.9rem;font-weight:600;transition:.3s;}
+    .btn-paleta:hover{filter:brightness(1.15);}    
+
+    /* ===== CTA App ===== */
+    .cta{max-width:800px;margin:64px auto;padding:32px;border-radius:24px;background:var(--secondary);text-align:center;display:flex;flex-direction:column;gap:24px;box-shadow:0 8px 24px #0002;}
+    .cta h3{font-family:Poppins,sans-serif;font-size:1.4rem;color:var(--primary);}    
+    .btn-app{background:var(--primary);color:#fff;border:none;padding:14px 32px;font-size:1rem;border-radius:16px;text-decoration:none;font-weight:700;align-self:center;transition:.3s;}
+    .btn-app:hover{transform:translateY(-2px);}    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Harmonia Visual</div>
+    <div class="burger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+  <nav id="navMenu">
+    <a href="index.html">Início</a>
+    <a href="formatos-femininos.html">Formatos Femininos</a>
+    <a href="formatos-masculinos.html">Formatos Masculinos</a>
+    <a href="#" class="btn-app">Adquira o App</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/feminino/diamante/hero.png" alt="Exemplo look corpo diamante feminino">
+    <h1>Corpo Diamante</h1>
+    <p>Cintura e abdômen são a parte mais larga, enquanto ombros e quadris são mais estreitos. A meta é alongar a silhueta, valorizar pernas e definir a região da cintura.</p>
+  </section>
+
+  <!-- LOOKS CASUAIS -->
+  <section>
+    <h2>Looks Casuais</h2>
+    <div class="looks-grid">
+      <div class="look-card">
+        <img src="img/feminino/diamante/casual1.png" alt="Look casual 1">
+        <div class="info">
+          <p>Blusa decote V escura + jeans reto cropped para alongar visualmente.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver cores que realçam esse look</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/casual2.png" alt="Look casual 2">
+        <div class="info">
+          <p>Camiseta soltinha + saia linha A estampada suave. Harmonia instantânea.</p>
+          <a class="btn-paleta" href="tom-claro.html">Descobrir tons ideais</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/casual3.png" alt="Look casual 3">
+        <div class="info">
+          <p>Cardigã alongado aberto + legging escura. Cria linhas verticais.</p>
+          <a class="btn-paleta" href="tom-claro.html">Quais cores me favorecem?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKS FORMAIS -->
+  <section>
+    <h2>Looks Formais</h2>
+    <div class="looks-grid">
+      <div class="look-card">
+        <img src="img/feminino/diamante/formal1.png" alt="Look formal 1">
+        <div class="info">
+          <p>Blazer acinturado escuro + saia lápis claro. Define cintura com elegância.</p>
+          <a class="btn-paleta" href="tom-claro.html">Realçar com minhas cores</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/formal2.png" alt="Look formal 2">
+        <div class="info">
+          <p>Vestido envelope em cor sólida escura. Drapeado equilibra proporções.</p>
+          <a class="btn-paleta" href="tom-claro.html">Paleta sob medida</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/formal3.png" alt="Look formal 3">
+        <div class="info">
+          <p>Conjunto monocromático com calça reta + blusa peplum suave.</p>
+          <a class="btn-paleta" href="tom-claro.html">Combinar cores ideais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKS VERÃO -->
+  <section>
+    <h2>Looks de Verão</h2>
+    <div class="looks-grid">
+      <div class="look-card">
+        <img src="img/feminino/diamante/verao1.png" alt="Look verão 1">
+        <div class="info">
+          <p>Vestido trapézio leve com estampa vertical. Frescor e alongamento.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver cores refrescantes</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/verao2.png" alt="Look verão 2">
+        <div class="info">
+          <p>Macacão de alcinha escuro + lenço colorido no pescoço. Foco no rosto.</p>
+          <a class="btn-paleta" href="tom-claro.html">Descobrir tons leves</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/verao3.png" alt="Look verão 3">
+        <div class="info">
+          <p>Cropped soltinho + saia midi rodada lisa para movimento.</p>
+          <a class="btn-paleta" href="tom-claro.html">Cores perfeitas para mim</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKS INVERNO -->
+  <section>
+    <h2>Looks de Inverno</h2>
+    <div class="looks-grid">
+      <div class="look-card">
+        <img src="img/feminino/diamante/inverno1.png" alt="Look inverno 1">
+        <div class="info">
+          <p>Casaco reto escuro + cachecol contrastante. Cria linhas verticais.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta inverno</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/inverno2.png" alt="Look inverno 2">
+        <div class="info">
+          <p>Suéter solto claro + calça reta escura. Balanceia volume.</p>
+          <a class="btn-paleta" href="tom-claro.html">Quais cores usar?</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/inverno3.png" alt="Look inverno 3">
+        <div class="info">
+          <p>Vestido suéter canelado escuro + meia-calça opaca. Alongamento total.</p>
+          <a class="btn-paleta" href="tom-claro.html">Combinações ideais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKS FESTAS -->
+  <section>
+    <h2>Festas & Eventos</h2>
+    <div class="looks-grid">
+      <div class="look-card">
+        <img src="img/feminino/diamante/festa1.png" alt="Look festa 1">
+        <div class="info">
+          <p>Vestido império com decote V profundo. Destaca colo e alonga.</p>
+          <a class="btn-paleta" href="tom-claro.html">Brilhar com as melhores cores</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/festa2.png" alt="Look festa 2">
+        <div class="info">
+          <p>Saia longa escura + blusa peplum cinturada. Silhueta elegante.</p>
+          <a class="btn-paleta" href="tom-claro.html">Ver paleta glam</a>
+        </div>
+      </div>
+      <div class="look-card">
+        <img src="img/feminino/diamante/festa3.png" alt="Look festa 3">
+        <div class="info">
+          <p>Macacão flare com detalhe vertical frontal. Impacto e equilíbrio.</p>
+          <a class="btn-paleta" href="tom-claro.html">Cores que destacam</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>Seu guia 100% personalizado aguarda você!</h3>
+    <p>Baixe o app, tire uma foto e receba sua paleta exclusiva junto aos looks sob medida para o corpo Diamante.</p>
+    <a href="#" class="btn-app">Quero meu estilo perfeito</a>
+  </div>
+
+  <script>
+    function toggleNav(){document.getElementById('navMenu').classList.toggle('open');}
+  </script>
+</body>
+</html>

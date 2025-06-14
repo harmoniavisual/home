@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonia Visual – Corpo Triângulo / Pêra (F)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --site-bg:#FAFAF7;
+      --primary:#82431F;          /* marrom elegante */
+      --secondary:#FFD0A8;        /* destaque suave */
+      --dark:#372413;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Roboto, sans-serif;}
+    body{background:var(--site-bg);color:var(--dark);line-height:1.5;}
+    a{color:var(--primary);text-decoration:none;}
+    /*=============== NAV ===============*/
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06);position:sticky;top:0;z-index:100;}
+    .logo{font:700 1.2rem Poppins;}    
+    .btn-app{background:var(--primary);color:#fff;padding:8px 20px;border-radius:24px;font-size:.9rem;}
+    /* Hamburger */
+    .burger{width:26px;height:20px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;}
+    .burger span{height:3px;background:var(--primary);border-radius:3px;transition:.3s;}
+    nav{position:fixed;inset:0;background:rgba(250,250,247,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;font-size:1.2rem;transform:translateX(100%);transition:.3s;}
+    nav.open{transform:translateX(0);}    
+    /*=============== HERO ===============*/
+    .hero{max-width:900px;margin:64px auto 48px;padding:0 24px;text-align:center;}
+    .hero img{max-width:320px;border-radius:16px;margin-bottom:24px;}
+    .hero h1{font:700 1.8rem Poppins;margin-bottom:12px;color:var(--primary);}    
+    /*=============== LOOK SECTIONS ===============*/
+    .section{max-width:1000px;margin:48px auto;padding:0 24px;}
+    .section h2{font:700 1.4rem Poppins;color:var(--primary);margin-bottom:24px;text-align:center;}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+    .card{background:#fff;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,.05);padding:16px;text-align:center;display:flex;flex-direction:column;}
+    .card img{width:100%;height:320px;object-fit:cover;border-radius:12px;margin-bottom:12px;}
+    .card p{font-size:.9rem;margin-bottom:12px;}
+    .card a{background:var(--secondary);padding:8px 16px;border-radius:20px;font-weight:600;align-self:center;}
+    /*=============== FOOTER ===============*/
+    footer{text-align:center;padding:48px 0 24px;font-size:.8rem;color:#666;}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="logo">Harmonia Visual</div>
+    <a href="#" class="btn-app">Adquira o App</a>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+  <nav id="menu">
+    <a href="index.html">Início</a>
+    <a href="formatos-femininos.html">Formatos Femininos</a>
+    <a href="formatos-masculinos.html">Formatos Masculinos</a>
+    <a href="#" class="btn-app">Adquira o App</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/feminino/triangulo-pera/hero.png" alt="Ilustração corpo triângulo ou pêra">
+    <h1>Corpo Triângulo / Pêra</h1>
+    <p>Cintura fina, quadris mais largos que os ombros e ombros levemente arredondados — este formato valoriza equilíbrio na parte superior e suavidade na parte inferior.</p>
+  </section>
+
+  <!-- DESCRIÇÃO MEDIDAS -->
+  <section class="section" id="medidas">
+    <h2>Como identificar</h2>
+    <p style="max-width:600px;margin:0 auto 32px;">• Ombros aproximadamente 5&nbsp;cm mais estreitos que quadris<br>• Cintura bem definida (diferença &gt; 25&nbsp;cm entre cintura e quadril)<br>• Coxas costumam ganhar volume primeiro.<br><br>Dica rápida: realce a parte superior com detalhes e mantenha a parte inferior em tons mais escuros/neutros para harmonizar.</p>
+  </section>
+
+  <!-- LOOKS -->
+  <section class="section">
+    <h2>Looks Casuais</h2>
+    <div class="cards">
+      <div class="card"><img src="img/feminino/triangulo-pera/casual1.png" alt="Casual Look 1"><p>Jeans reto + blusa listrada horizontal nos ombros.</p><a href="tom-claro.html">Ver cores que realçam este look</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/casual2.png" alt="Casual Look 2"><p>Saia A-line + camiseta cropped neutra.</p><a href="tom-claro.html">Descubra a paleta perfeita</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/casual3.png" alt="Casual Look 3"><p>Macacão utilitário com cintinho para marcar a cintura.</p><a href="tom-claro.html">Cores ideais para mim</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Looks Formais</h2>
+    <div class="cards">
+      <div class="card"><img src="img/feminino/triangulo-pera/formal1.png" alt="Formal Look 1"><p>Blazer estruturado + calça reta escura.</p><a href="tom-claro.html">Ver paleta ideal</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/formal2.png" alt="Formal Look 2"><p>Vestido envelope até o joelho.</p><a href="tom-claro.html">Quais cores valorizar?</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/formal3.png" alt="Formal Look 3"><p>Saia midi plissada + camisa mangas bufantes.</p><a href="tom-claro.html">Paleta perfeita</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Looks de Verão</h2>
+    <div class="cards">
+      <div class="card"><img src="img/feminino/triangulo-pera/verao1.png" alt="Verão Look 1"><p>Vestido leve com decote canoa.</p><a href="tom-claro.html">Ver cores verão</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/verao2.png" alt="Verão Look 2"><p>Short de linho + regata estampada.</p><a href="tom-claro.html">Minha paleta fresca</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/verao3.png" alt="Verão Look 3"><p>Macacão pantacourt alça fina.</p><a href="tom-claro.html">Cores que iluminam</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Looks de Inverno</h2>
+    <div class="cards">
+      <div class="card"><img src="img/feminino/triangulo-pera/inverno1.png" alt="Inverno Look 1"><p>Trench coat acinturado + bota cano curto.</p><a href="tom-claro.html">Paleta de inverno</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/inverno2.png" alt="Inverno Look 2"><p>Suéter ombro caído + calça flare.</p><a href="tom-claro.html">Cores para aquecer</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/inverno3.png" alt="Inverno Look 3"><p>Vestido tricô + jaqueta cropped.</p><a href="tom-claro.html">Ver tons ideais</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Festas & Eventos</h2>
+    <div class="cards">
+      <div class="card"><img src="img/feminino/triangulo-pera/festa1.png" alt="Festa Look 1"><p>Vestido sereia decote ombro a ombro.</p><a href="tom-claro.html">Paleta glam</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/festa2.png" alt="Festa Look 2"><p>Jumpsuit decote halter detalhado no busto.</p><a href="tom-claro.html">Ver cores destaque</a></div>
+      <div class="card"><img src="img/feminino/triangulo-pera/festa3.png" alt="Festa Look 3"><p>Saia lápis metalizada + top estruturado.</p><a href="tom-claro.html">Tons que brilham</a></div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section" style="text-align:center;max-width:720px;">
+    <h2 style="margin-bottom:16px;">Quer um guarda-roupa sob medida?</h2>
+    <p style="margin-bottom:24px;">Nosso app fotografa você, define seu formato e tom de pele e gera looks 100% personalizados em segundos.</p>
+    <a href="#" class="btn-app">Quero meu estilo perfeito</a>
+  </section>
+
+  <footer>© 2025 Harmonia Visual. Todos os direitos reservados.</footer>
+
+  <script>
+    const burger=document.getElementById('burger');
+    const menu=document.getElementById('menu');
+    burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  </script>
+</body>
+</html>
